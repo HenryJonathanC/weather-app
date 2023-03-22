@@ -21,12 +21,8 @@ function App() {
   fetchWeather()
   }, [query, units])
 
-  const formatBackground = ()=> {
-
-  }
-
   return (
-    <div className="mx-auto max-w-screen-md mt-5 py-5 px-32 bg-gradient-to-br from-cyan-500 to-blue-700 h-fit shadow-xl shadow-gray-400">
+    <div className="mx-auto max-w-screen-md mt-10 py-5 px-20 bg-gradient-to-br from-slate-900 to-blue-700 h-fit shadow-xl shadow-gray-400">
         <TopButtons setQuery={setQuery}/>
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>
         {weather && (
@@ -34,9 +30,7 @@ function App() {
               <TimeAndLocation weather={weather}/>
               <TemperatureAndDetails weather={weather}/>
           </>
-        )}
-        
-
+        )}     
     </div>
   );
 }
